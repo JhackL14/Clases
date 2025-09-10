@@ -1,7 +1,7 @@
 #Autor: Joel Garcia
 
 class Sistema_solar:
-    contador_id = 1  # Atributo de clase para IDs únicos
+    contador_id = 1  
 
     def __init__(self, nombre):
         self.nombre = nombre
@@ -56,5 +56,9 @@ sol = Sistema_solar("Sol")
 sol.agregar_planeta("Mercurio", 3.30e23, 5.43, 4879, 57.9e6)
 sol.agregar_planeta("Venus", 4.87e24, 5.24, 12104, 108.2e6)
 sol.agregar_planeta("Tierra", 5.97e24, 5.52, 12756, 149.6e6)
+
+sol.mostrar_planeta_por_id(3)
+
+sol.mostrar_todas_los_planetas()
 
 sol.gravitacion(1, 3)
