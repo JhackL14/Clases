@@ -23,7 +23,7 @@ class Sistema_solar:
 
 
     def mostrar_planeta_por_id(self, id_busqueda):
-        for planeta in self.estrellas:
+        for planeta in self.planetas:
             if planeta['id'] == id_busqueda:
                 print(f"ID: {planeta['id']}, Nombre: {planeta['nombre']}, Masa: {planeta['masa']}, "
                       f"Densidad: {planeta['densidad']}, Diámetro: {planeta['diametro']}, "
@@ -32,7 +32,7 @@ class Sistema_solar:
         print(f"No se encontró una planeta con ID: {id_busqueda}")
 
     def mostrar_todas_los_planetas(self):
-        for planeta in self.estrellas:
+        for planeta in self.planetas:
             print(f"ID: {planeta['id']}, Nombre: {planeta['nombre']}, Masa: {planeta['masa']}, "
                   f"Densidad: {planeta['densidad']}, Diámetro: {planeta['diametro']}, "
                   f"Distancia al Sol: {planeta['distancia_sol']}")
