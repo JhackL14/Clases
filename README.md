@@ -12,3 +12,7 @@ El 3 metodo es para mostrar todos los planetas
 
 Ademas se agrago un metodo para calcular la fuerza gravitacional
 <img width="556" height="15" alt="image" src="https://github.com/user-attachments/assets/d8d2d00a-f01d-4bfd-a7cc-8ee0ca7afabc" />
+
+
+Para la lista aleatoria, se craron dos metodos, uno ordena por burbuja y el otro por quicksort
+<img width="713" height="57" alt="image" src="https://github.com/user-attachments/assets/aef96462-0f09-4ae5-b5fd-b3f6b7ee80e7" />
