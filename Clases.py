@@ -1,5 +1,5 @@
 #Autor: Joel Garcia
-
+import random
 class Sistema_solar:
     contador_id = 1  
 
@@ -52,13 +52,47 @@ class Sistema_solar:
         return f
 
 
-sol = Sistema_solar("Sol")
-sol.agregar_planeta("Mercurio", 3.30e23, 5.43, 4879, 57.9e6)
-sol.agregar_planeta("Venus", 4.87e24, 5.24, 12104, 108.2e6)
-sol.agregar_planeta("Tierra", 5.97e24, 5.52, 12756, 149.6e6)
+# sol = Sistema_solar("Sol")
+# sol.agregar_planeta("Mercurio", 3.30e23, 5.43, 4879, 57.9e6)
+# sol.agregar_planeta("Venus", 4.87e24, 5.24, 12104, 108.2e6)
+# sol.agregar_planeta("Tierra", 5.97e24, 5.52, 12756, 149.6e6)
 
-sol.mostrar_planeta_por_id(3)
+# sol.mostrar_planeta_por_id(3)
 
-sol.mostrar_todas_los_planetas()
+# sol.mostrar_todas_los_planetas()
 
-sol.gravitacion(1, 3)
+# sol.gravitacion(1, 3)
+
+import random
+
+class Lista_Aleatoria:
+    def __init__(self, n):
+        self.n = n
+        self.lista = random.sample(range(1, n + 1), n)
+        print(f"Lista aleatoria: {self.lista}")
+
+    def ordenar_burbuja(self):
+        arr = self.lista.copy()
+        for i in range(len(arr)):
+            for j in range(0, len(arr) - i - 1):
+                if arr[j] > arr[j + 1]:
+                    arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        print(f"Lista ordenada por burbuja: {arr}")
+        return arr
+
+    def ordenar_quicksort(self):
+        def quicksort(arr):
+            if len(arr) <= 1:
+                return arr
+            pivote = arr[0]
+            menores = [x for x in arr[1:] if x <= pivote]
+            mayores = [x for x in arr[1:] if x > pivote]
+            return quicksort(menores) + [pivote] + quicksort(mayores)
+        ordenada = quicksort(self.lista)
+        print(f"Lista ordenada por quicksort: {ordenada}")
+        return ordenada
+
+
+nums  = Lista_Aleatoria(10)
+Lista_Aleatoria.ordenar_burbuja(nums)
+Lista_Aleatoria.ordenar_quicksort(nums)
